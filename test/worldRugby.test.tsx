@@ -64,7 +64,7 @@ describe('Women’s rugby Results from World Rugby', () => {
     const [semiFinal] = await resultRows("Premiership Women's Rugby");
     expect(within(semiFinal!).getByRole('link', { name: 'Match Details' })).toHaveAttribute(
       'href',
-      expect.stringMatching(/^https:\/\/www\.world\.rugby\/matches\/ea214766-[\w-]+\?language=en$/),
+      expect.stringMatching(/^https:\/\/www\.world\.rugby\/match\/ea214766-[\w-]+$/),
     );
   });
 

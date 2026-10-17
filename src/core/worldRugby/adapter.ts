@@ -143,7 +143,7 @@ function toResult(match: unknown, competition: WorldRugbyCompetition): Result | 
     kickoff: new Date(millis).toISOString(),
     home,
     away,
-    matchDetailsUrl: `https://www.world.rugby/matches/${id}?language=en`,
+    matchDetailsUrl: `https://www.world.rugby/match/${id}`,
     winner: winnerOf(home, away),
   };
 }

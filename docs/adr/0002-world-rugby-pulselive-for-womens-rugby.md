@@ -12,5 +12,5 @@ A Competition's `source` has a `kind`, and each kind has its own adapter (`src/c
 - The winner comes from the scores, as for ESPN, not from `outcome` (`A` or `B` for the first or second team; its value for a draw was not seen). A contract test checks the two agree.
 - Past days are cached once they are two days old, but a match can show `U` for a while after it finishes. If World Rugby marks it `C` later than that, the cached day stays without it.
 - There is no home/away flag, so the first team is shown as home.
-- There are no logos and no match links. Match Details points to `https://www.world.rugby/matches/<matchId>?language=en`. That URL pattern was not verified: `www.world.rugby` could not be reached when this was built.
+- There are no logos and no match links. Match Details points to `https://www.world.rugby/match/<matchId>`, which redirects to the match page. The earlier `/matches/<matchId>?language=en` pattern was unverified and 404s.
 - The rate limit is 50 requests per 60 seconds per client. A refresh makes one event-list request per page (2 now) plus 1 schedule request per event overlapping the Window, which is normally 1 per Competition. A Window that crosses a year boundary can match two editions of a Competition.
