@@ -22,7 +22,13 @@ describe('All launch Competitions grouped by Sport', () => {
   it('shows the Sports in config order', () => {
     renderApp();
 
-    expect(sportHeadings()).toEqual(['Basketball', 'American Football', 'Football', 'Rugby Union']);
+    expect(sportHeadings()).toEqual([
+      'Basketball',
+      'American Football',
+      'Football',
+      'Rugby Union',
+      "Women's Rugby Union",
+    ]);
   });
 
   it('groups each Competition under its Sport', () => {
@@ -33,6 +39,10 @@ describe('All launch Competitions grouped by Sport', () => {
       ['American Football', ['NFL']],
       ['Football', ['Premier League']],
       ['Rugby Union', ['Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']],
+      [
+        "Women's Rugby Union",
+        ["Premiership Women's Rugby", 'PWR Cup', 'WXV', 'WXV Challenger'],
+      ],
     ];
     for (const [sport, competitions] of expected) {
       const section = screen.getByRole('region', { name: sport });
@@ -51,12 +61,18 @@ describe('Config drives the layout', () => {
     };
     renderApp({ config: reordered });
 
-    expect(sportHeadings()).toEqual(['Rugby Union', 'Football', 'American Football', 'Basketball']);
+    expect(sportHeadings()).toEqual([
+      "Women's Rugby Union",
+      'Rugby Union',
+      'Football',
+      'American Football',
+      'Basketball',
+    ]);
   });
 
   it('shows a new Sport and Competition added by config alone', async () => {
     const extended: CompetitionConfig = {
-      sports: [...competitionConfig.sports, { id: 'ice-hockey', name: 'Ice Hockey', order: 5 }],
+      sports: [...competitionConfig.sports, { id: 'ice-hockey', name: 'Ice Hockey', order: 6 }],
       competitions: [
         ...competitionConfig.competitions,
         {
@@ -74,6 +90,7 @@ describe('Config drives the layout', () => {
       'American Football',
       'Football',
       'Rugby Union',
+      "Women's Rugby Union",
       'Ice Hockey',
     ]);
     const iceHockey = screen.getByRole('region', { name: 'Ice Hockey' });
@@ -168,11 +185,12 @@ describe('Fetching the Competitions', () => {
     };
     renderApp({ espn: { ...espn, fetch: pending } });
 
-    await waitFor(() => expect(requested).toHaveLength(7));
-    expect(requested.map((u) => u.pathname)).toEqual(
+    const espnRequests = () => requested.filter((u) => u.host !== 'api.wr-rims-prod.pulselive.com');
+    await waitFor(() => expect(espnRequests()).toHaveLength(7));
+    expect(espnRequests().map((u) => u.pathname)).toEqual(
       Array(7).fill('/apis/v2/scoreboard/header'),
     );
-    expect(requested.map((u) => `${u.searchParams.get('sport')}/${u.searchParams.get('league')}`).sort()).toEqual([
+    expect(espnRequests().map((u) => `${u.searchParams.get('sport')}/${u.searchParams.get('league')}`).sort()).toEqual([
       'basketball/nba',
       'football/nfl',
       'rugby/180659',

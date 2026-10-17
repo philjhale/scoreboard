@@ -1,6 +1,6 @@
 # sports-aggregator
 
-Shows summary of recent match results across several competitions using [ESPN's free unofficial API](https://github.com/pseudo-r/Public-ESPN-API). This was created as a playground for testing some of [Matt Pocock's skills](https://www.aihero.dev/skills) like `/pr` and `/implement-spec`.
+Shows summary of recent match results across several competitions using [ESPN's free unofficial API](https://github.com/pseudo-r/Public-ESPN-API), and World Rugby's unofficial API for women's rugby. This was created as a playground for testing some of [Matt Pocock's skills](https://www.aihero.dev/skills) like `/pr` and `/implement-spec`.
 
 ## Local development
 
@@ -13,7 +13,7 @@ npm run build     # type-check and build to dist/
 npm run preview   # serve the built dist/ locally
 ```
 
-The app calls ESPN directly from the browser, so the dev server needs internet access to show real Results.
+The app calls ESPN and World Rugby directly from the browser, so the dev server needs internet access to show real Results.
 
 
 ## Deploy
@@ -35,12 +35,14 @@ Everything lives in `src/core/config.ts`. No other code changes are needed.
   },
   ```
 
+  Women's rugby (Premiership Women's Rugby, PWR Cup, WXV, WXV Challenger) comes from World Rugby, not ESPN. Its `source` names the event instead: `{ kind: 'world-rugby', eventName: 'PWR' }`. `eventName` is the event label without its year (`PWR` for `PWR 2026`). World Rugby event ids change every season, so the app resolves the id from the label at runtime.
+
 - **Sport**: add an entry to `sports` with an `id`, a display `name` and an `order` (Sports are shown in ascending `order`). Then add its Competitions as above.
 
-If the tests should cover the new Competition, add a fixture to `test/fixtures/espn/` and register it in `test/helpers/fakeEspn.ts`.
+If the tests should cover the new Competition, add a fixture to `test/fixtures/espn/` (or `test/fixtures/world-rugby/`) and register it in `test/helpers/fakeEspn.ts`.
 
 ## Layout
 
-- `src/core/`: framework-free domain core (types, Competition config, Window, settings, results service). All ESPN parsing lives in `src/core/espn/adapter.ts`.
+- `src/core/`: framework-free domain core (types, Competition config, Window, settings, results service). All ESPN parsing lives in `src/core/espn/adapter.ts` and all World Rugby parsing in `src/core/worldRugby/adapter.ts`.
 - `src/ui/`: React components rendering what the core returns. `styles.css` defines light and dark colour tokens as CSS custom properties, switched by `prefers-color-scheme`.
 - `test/`: whole-app tests, helpers and fixtures.

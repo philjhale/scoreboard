@@ -27,6 +27,7 @@ export async function fetchResults(
   timeZone: string,
 ): Promise<Result[]> {
   const { source } = competition;
+  if (source.kind !== 'espn') throw new Error(`${competition.id} is not an ESPN Competition`);
   try {
     return parseHeader(await getJson(fetchFn, headerUrl(source, dates, timeZone)), competition);
   } catch {
@@ -166,6 +167,8 @@ const DROPPED_STATUSES = new Set([
 
 function toResult(event: RawEvent, competition: Competition): Result | undefined {
   const { id, kickoff, statusType } = event;
+  const { source } = competition;
+  if (source.kind !== 'espn') return undefined;
   if (!id || !kickoff || Number.isNaN(Date.parse(kickoff))) return undefined;
   if (!isFinished(statusType, event.state)) return undefined;
 
@@ -181,7 +184,7 @@ function toResult(event: RawEvent, competition: Competition): Result | undefined
     home,
     away,
     ...(extraTime ? { extraTime } : {}),
-    matchDetailsUrl: event.link ?? fallbackMatchDetailsUrl(competition.source, id),
+    matchDetailsUrl: event.link ?? fallbackMatchDetailsUrl(source, id),
     winner: winnerOf(home, away),
   };
 }

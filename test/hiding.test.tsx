@@ -25,6 +25,10 @@ describe('Hiding Competitions', () => {
       ['Rugby Union', 'United Rugby Championship'],
       ['Rugby Union', 'Top 14'],
       ['Rugby Union', 'Six Nations'],
+      ["Women's Rugby Union", "Premiership Women's Rugby"],
+      ["Women's Rugby Union", 'PWR Cup'],
+      ["Women's Rugby Union", 'WXV'],
+      ["Women's Rugby Union", 'WXV Challenger'],
     ]) {
       const group = within(panel.getByRole('group', { name: sport }));
       expect(group.getByRole('checkbox', { name: competition })).toBeChecked();
@@ -69,6 +73,7 @@ describe('Hiding Competitions', () => {
       'Basketball',
       'American Football',
       'Football',
+      "Women's Rugby Union",
     ]);
   });
 
@@ -77,7 +82,7 @@ describe('Hiding Competitions', () => {
     const panel = within(await openCompetitionsPanel(user));
     expect(screen.queryByText(/All Competitions are hidden/)).not.toBeInTheDocument();
 
-    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']) {
+    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations', "Premiership Women's Rugby", 'PWR Cup', 'WXV', 'WXV Challenger']) {
       await user.click(panel.getByRole('checkbox', { name }));
     }
 

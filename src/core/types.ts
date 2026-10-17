@@ -7,7 +7,7 @@ export interface Sport {
   order: number;
 }
 
-/** Where a Competition's Results come from. Only ESPN for now. */
+/** Where a Competition's Results come from. */
 export interface EspnSource {
   kind: 'espn';
   /** ESPN sport slug, e.g. `basketball`. */
@@ -16,7 +16,17 @@ export interface EspnSource {
   league: string;
 }
 
-export type CompetitionSource = EspnSource;
+/**
+ * World Rugby's Pulselive API. Its events (competition editions) have a new id
+ * every season, so a Competition names the event `label` it appears under.
+ */
+export interface WorldRugbySource {
+  kind: 'world-rugby';
+  /** The event label without its year, e.g. `PWR` for `PWR 2026`. */
+  eventName: string;
+}
+
+export type CompetitionSource = EspnSource | WorldRugbySource;
 
 export interface Competition {
   id: string;

@@ -30,9 +30,14 @@ export const PREMIER_LEAGUE_NOW = '2026-09-20T18:00:00Z';
 export const GALLAGHER_NOW = '2026-10-04T20:00:00Z';
 /** Window 12-14 Mar in Europe/London: the recorded Six Nations final round. */
 export const SIX_NATIONS_NOW = '2026-03-14T23:00:00Z';
+/** Window 12-14 Jun in Europe/London: the recorded PWR semi-finals. */
+export const PWR_NOW = '2026-06-14T21:00:00Z';
+/** Window 17-19 Sep in Europe/London: the recorded WXV and WXV Challenger matches. */
+export const WXV_NOW = '2026-09-19T21:00:00Z';
+// The recorded PWR Cup matches (2-3 Oct) fall in the GALLAGHER_NOW Window.
 
 /**
- * Renders the whole app with only the outside world faked: ESPN (fetch),
+ * Renders the whole app with only the outside world faked: ESPN and World Rugby (fetch),
  * the clock, the timezone/locale and browser storage.
  */
 export function renderApp(options: RenderAppOptions = {}) {

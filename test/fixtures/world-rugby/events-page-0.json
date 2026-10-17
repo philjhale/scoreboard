@@ -1,0 +1,46 @@
+{
+  "pageInfo": {
+    "page": 0,
+    "numPages": 2,
+    "pageSize": 100,
+    "numEntries": 157
+  },
+  "content": [
+    {
+      "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+      "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+      "label": "PWR 2026",
+      "sport": "wru",
+      "start": {
+        "millis": 1761256800000,
+        "gmtOffset": 2,
+        "label": "2025-10-24"
+      },
+      "end": {
+        "millis": 1782770400000,
+        "gmtOffset": 2,
+        "label": "2026-06-30"
+      },
+      "abbr": "",
+      "winningTeam": {
+        "id": "3115",
+        "altId": "6a12a46f-8829-4042-9fe9-be53d5e995ee",
+        "name": "Saracens Women",
+        "abbreviation": "SAR",
+        "countryCode": null,
+        "annotations": null,
+        "metadata": {}
+      },
+      "eventStatus": {
+        "eventStatusID": 1,
+        "eventStatusName": "Scheduled"
+      },
+      "seriesId": null,
+      "seriesAltId": null,
+      "rankingsWeight": 0,
+      "metadata": {},
+      "impactPlayers": null,
+      "teamPerformances": null
+    }
+  ]
+}

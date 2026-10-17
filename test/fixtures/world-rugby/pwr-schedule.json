@@ -1,0 +1,474 @@
+{
+  "event": {
+    "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+    "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+    "label": "PWR 2026",
+    "sport": "wru",
+    "start": {
+      "millis": 1761256800000,
+      "gmtOffset": 2,
+      "label": "2025-10-24"
+    },
+    "end": {
+      "millis": 1782770400000,
+      "gmtOffset": 2,
+      "label": "2026-06-30"
+    },
+    "abbr": "",
+    "winningTeam": {
+      "id": "3115",
+      "altId": "6a12a46f-8829-4042-9fe9-be53d5e995ee",
+      "name": "Saracens Women",
+      "abbreviation": "SAR",
+      "countryCode": null,
+      "annotations": null,
+      "metadata": {}
+    },
+    "eventStatus": {
+      "eventStatusID": 1,
+      "eventStatusName": "Scheduled"
+    },
+    "seriesId": null,
+    "seriesAltId": null,
+    "rankingsWeight": 0,
+    "metadata": {},
+    "impactPlayers": null,
+    "teamPerformances": []
+  },
+  "matches": [
+    {
+      "matchId": "4dcc5eba-2999-4910-8500-5ba1f3ccf3f1",
+      "matchAltId": "4dcc5eba-2999-4910-8500-5ba1f3ccf3f1",
+      "description": "Match 23",
+      "eventPhase": "League",
+      "eventPhaseId": null,
+      "venue": {
+        "id": "31",
+        "altId": "f512ad23-b9e3-4d10-9317-120007d73026",
+        "name": "Mattioli Woods Welford Road Stadium",
+        "city": "Leicester",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1765040700000,
+        "gmtOffset": 0,
+        "label": "2025-12-06"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "4d84e27f-7f1b-4383-bbc1-ce67a2b7e81a",
+          "altId": "4d84e27f-7f1b-4383-bbc1-ce67a2b7e81a",
+          "name": "Leicester Tigers Women",
+          "abbreviation": "LEI",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "4262",
+          "altId": "0f6b8a68-2a41-4046-8946-2c4e0f5c8a19",
+          "name": "Harlequins Women",
+          "abbreviation": "HAR",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        28,
+        56
+      ],
+      "kc": null,
+      "status": "U",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "N",
+      "events": [
+        {
+          "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "label": "Premiership Womens Rugby 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1761264000000,
+            "gmtOffset": 2,
+            "label": "2025-10-24"
+          },
+          "end": {
+            "millis": 1782777600000,
+            "gmtOffset": 2,
+            "label": "2026-06-30"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "Premiership Womens Rugby 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "988218f0-020c-4e9c-a5e7-0ce128bd4a3d",
+      "matchAltId": "988218f0-020c-4e9c-a5e7-0ce128bd4a3d",
+      "description": "Match 69",
+      "eventPhase": "League",
+      "eventPhaseId": null,
+      "venue": {
+        "id": "797",
+        "altId": "5af8ed42-3ba1-42b2-bca2-4962aa0643be",
+        "name": "Sandy Park",
+        "city": "Exeter",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1780759800000,
+        "gmtOffset": 1,
+        "label": "2026-06-06"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "4577",
+          "altId": "9af49833-5c20-4337-8145-ffa3f9f29592",
+          "name": "Exeter Chiefs Women",
+          "abbreviation": "EXE",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "10912549-64d9-46d8-a01c-c132be6d8f53",
+          "altId": "10912549-64d9-46d8-a01c-c132be6d8f53",
+          "name": "Sale Sharks Women",
+          "abbreviation": null,
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        50,
+        24
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "label": "Premiership Womens Rugby 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1761264000000,
+            "gmtOffset": 2,
+            "label": "2025-10-24"
+          },
+          "end": {
+            "millis": 1782777600000,
+            "gmtOffset": 2,
+            "label": "2026-06-30"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "Premiership Womens Rugby 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "18b0ef9e-bf39-4d13-a364-1a6f0f03d3b4",
+      "matchAltId": "18b0ef9e-bf39-4d13-a364-1a6f0f03d3b4",
+      "description": null,
+      "eventPhase": "Semi-Finals",
+      "eventPhaseId": {
+        "type": "Semi",
+        "subType": "Final"
+      },
+      "venue": {
+        "id": "30",
+        "altId": "8a02b234-e6e6-4985-a571-1b430d6d0f3d",
+        "name": "Kingsholm",
+        "city": "Gloucester",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1781442000000,
+        "gmtOffset": 1,
+        "label": "2026-06-14"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "4281",
+          "altId": "39554f4f-34c3-4427-89c8-da34c24ceceb",
+          "name": "Gloucester-Hartpury Women",
+          "abbreviation": "GLO",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "1b8ad29b-8b4c-44a8-97fd-c98411493b60",
+          "altId": "1b8ad29b-8b4c-44a8-97fd-c98411493b60",
+          "name": "Trailfinders Women",
+          "abbreviation": "TRF",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        26,
+        29
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "B",
+      "events": [
+        {
+          "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "label": "Premiership Womens Rugby 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1761264000000,
+            "gmtOffset": 2,
+            "label": "2025-10-24"
+          },
+          "end": {
+            "millis": 1782777600000,
+            "gmtOffset": 2,
+            "label": "2026-06-30"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "Premiership Womens Rugby 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "ea214766-e300-440c-92b7-6247f5c359b9",
+      "matchAltId": "ea214766-e300-440c-92b7-6247f5c359b9",
+      "description": null,
+      "eventPhase": "Semi-Finals",
+      "eventPhaseId": {
+        "type": "Semi",
+        "subType": "Final"
+      },
+      "venue": {
+        "id": "1768",
+        "altId": "09c3f731-34a1-4bb8-a0e7-60ce1c80de3f",
+        "name": "StoneX Stadium",
+        "city": "London",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1781451000000,
+        "gmtOffset": 1,
+        "label": "2026-06-14"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "3115",
+          "altId": "6a12a46f-8829-4042-9fe9-be53d5e995ee",
+          "name": "Saracens Women",
+          "abbreviation": "SAR",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "4577",
+          "altId": "9af49833-5c20-4337-8145-ffa3f9f29592",
+          "name": "Exeter Chiefs Women",
+          "abbreviation": "EXE",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        40,
+        38
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "label": "Premiership Womens Rugby 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1761264000000,
+            "gmtOffset": 2,
+            "label": "2025-10-24"
+          },
+          "end": {
+            "millis": 1782777600000,
+            "gmtOffset": 2,
+            "label": "2026-06-30"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "Premiership Womens Rugby 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "723d351f-619e-4d99-a1a6-57a7a6544d0c",
+      "matchAltId": "723d351f-619e-4d99-a1a6-57a7a6544d0c",
+      "description": null,
+      "eventPhase": "Final",
+      "eventPhaseId": {
+        "type": "Final",
+        "subType": "Final"
+      },
+      "venue": {
+        "id": "967",
+        "altId": "06ac0994-f365-43d4-a4e0-4058a6ef78d5",
+        "name": "Twickenham Stoop",
+        "city": "Twickenham",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1782655200000,
+        "gmtOffset": 1,
+        "label": "2026-06-28"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "3115",
+          "altId": "6a12a46f-8829-4042-9fe9-be53d5e995ee",
+          "name": "Saracens Women",
+          "abbreviation": "SAR",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "1b8ad29b-8b4c-44a8-97fd-c98411493b60",
+          "altId": "1b8ad29b-8b4c-44a8-97fd-c98411493b60",
+          "name": "Trailfinders Women",
+          "abbreviation": "TRF",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        52,
+        14
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "altId": "b65e2413-a9e1-4645-8a31-457c720884f4",
+          "label": "Premiership Womens Rugby 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1761264000000,
+            "gmtOffset": 2,
+            "label": "2025-10-24"
+          },
+          "end": {
+            "millis": 1782777600000,
+            "gmtOffset": 2,
+            "label": "2026-06-30"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "Premiership Womens Rugby 2026",
+      "weather": null,
+      "rankingsWeight": null
+    }
+  ]
+}

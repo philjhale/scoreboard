@@ -1,0 +1,627 @@
+{
+  "event": {
+    "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+    "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+    "label": "WXV Global Series 2026",
+    "sport": "wru",
+    "start": {
+      "millis": 1789084800000,
+      "gmtOffset": 0,
+      "label": "2026-09-11"
+    },
+    "end": {
+      "millis": 1793491200000,
+      "gmtOffset": 0,
+      "label": "2026-11-01"
+    },
+    "abbr": "",
+    "winningTeam": null,
+    "eventStatus": {
+      "eventStatusID": 1,
+      "eventStatusName": "Scheduled"
+    },
+    "seriesId": null,
+    "seriesAltId": null,
+    "rankingsWeight": 0,
+    "metadata": {},
+    "impactPlayers": null,
+    "teamPerformances": []
+  },
+  "matches": [
+    {
+      "matchId": "22056030-c322-43e1-9705-5fff0cbfdde2",
+      "matchAltId": "22056030-c322-43e1-9705-5fff0cbfdde2",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "1339",
+        "altId": "0330735f-7f0b-49bb-989c-e1fab92f942b",
+        "name": "CorPacq Stadium",
+        "city": "Manchester",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1789221600000,
+        "gmtOffset": 1,
+        "label": "2026-09-12"
+      },
+      "attendance": 9251,
+      "teams": [
+        {
+          "id": "2517",
+          "altId": "73f704bb-53f8-4f1c-94fe-e20e27590300",
+          "name": "England",
+          "abbreviation": "ENG",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2577",
+          "altId": "c4e77d7e-df4e-49d1-a70d-d456917c7d9d",
+          "name": "Australia",
+          "abbreviation": "AUS",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        48,
+        15
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "665d571f-0e30-4731-8b85-9924ba19301d",
+      "matchAltId": "665d571f-0e30-4731-8b85-9924ba19301d",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "2",
+        "altId": "48c725b9-38ce-48f4-8fae-845dfd6eb93f",
+        "name": "Cardiff Arms Park",
+        "city": "Cardiff",
+        "country": "Wales"
+      },
+      "time": {
+        "millis": 1789755300000,
+        "gmtOffset": 1,
+        "label": "2026-09-18"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2520",
+          "altId": "d6902328-503d-4396-94d0-51592e596a55",
+          "name": "Wales",
+          "abbreviation": "WAL",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2582",
+          "altId": "9f3bcff7-b344-4560-94ee-4b0575aa1783",
+          "name": "South Africa",
+          "abbreviation": "RSA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        50,
+        19
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "0f593dea-ea9d-4512-ab34-91f31afdf57d",
+      "matchAltId": "0f593dea-ea9d-4512-ab34-91f31afdf57d",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "1252",
+        "altId": "3c79d983-7237-4e5f-beac-1b9898751d43",
+        "name": "Stadio Omero Tognon",
+        "city": "Pordenone",
+        "country": "Italy"
+      },
+      "time": {
+        "millis": 1789821000000,
+        "gmtOffset": 2,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2601",
+          "altId": "0502c449-e10d-41b8-baf4-a256efd5c8b9",
+          "name": "Italy",
+          "abbreviation": "ITA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2967",
+          "altId": "449972cf-7a2d-4be1-8531-ad2fd96521a7",
+          "name": "Japan",
+          "abbreviation": "JPN",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        55,
+        21
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "32b3fae2-306e-4237-a839-37b88636bb4c",
+      "matchAltId": "32b3fae2-306e-4237-a839-37b88636bb4c",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "797",
+        "altId": "5af8ed42-3ba1-42b2-bca2-4962aa0643be",
+        "name": "Sandy Park",
+        "city": "Exeter",
+        "country": "England"
+      },
+      "time": {
+        "millis": 1789826400000,
+        "gmtOffset": 1,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2517",
+          "altId": "73f704bb-53f8-4f1c-94fe-e20e27590300",
+          "name": "England",
+          "abbreviation": "ENG",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2578",
+          "altId": "7491fdc4-ea51-40bb-90a0-3f3f9307ebed",
+          "name": "Canada",
+          "abbreviation": "CAN",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        26,
+        26
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "D",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "5993dbdb-d84b-480f-849f-488129e8056f",
+      "matchAltId": "5993dbdb-d84b-480f-849f-488129e8056f",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "1092",
+        "altId": "ee8873a9-3080-4a0a-b668-a81f96b336a8",
+        "name": "Stade Maurice David",
+        "city": "Aix-en-Provence",
+        "country": "France"
+      },
+      "time": {
+        "millis": 1789832700000,
+        "gmtOffset": 2,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2519",
+          "altId": "9a4e6b34-642e-44c1-bd7a-5427e5c813bd",
+          "name": "France",
+          "abbreviation": "FRA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2577",
+          "altId": "c4e77d7e-df4e-49d1-a70d-d456917c7d9d",
+          "name": "Australia",
+          "abbreviation": "AUS",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        29,
+        26
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "c703def6-9dbd-4179-8a2f-84409517e89e",
+      "matchAltId": "c703def6-9dbd-4179-8a2f-84409517e89e",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "1757",
+        "altId": "5f96c976-f690-49f2-91cf-726d2eeb073c",
+        "name": "Hive Stadium",
+        "city": "Edinburgh",
+        "country": "Scotland"
+      },
+      "time": {
+        "millis": 1789834200000,
+        "gmtOffset": 1,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2522",
+          "altId": "759b665c-7386-401c-bf12-50403121c3b7",
+          "name": "Scotland",
+          "abbreviation": "SCO",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2580",
+          "altId": "a9450678-8fba-4bdd-9ee2-5688091c5503",
+          "name": "New Zealand",
+          "abbreviation": "NZL",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        14,
+        66
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "B",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "da6a51bd-2422-47d0-bb04-2f870c3bc6b5",
+      "matchAltId": "da6a51bd-2422-47d0-bb04-2f870c3bc6b5",
+      "description": null,
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "ee55e626-3646-472c-9b4d-c1ea6eb08f65",
+        "altId": "ee55e626-3646-472c-9b4d-c1ea6eb08f65",
+        "name": "Texas Health Mansfield Stadium",
+        "city": "Texas",
+        "country": "United States"
+      },
+      "time": {
+        "millis": 1792274400000,
+        "gmtOffset": -5,
+        "label": "2026-10-17"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2583",
+          "altId": "4197b693-57a7-4baf-a476-a20ec1a263da",
+          "name": "USA",
+          "abbreviation": "USA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2601",
+          "altId": "0502c449-e10d-41b8-baf4-a256efd5c8b9",
+          "name": "Italy",
+          "abbreviation": "ITA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "kc": null,
+      "status": "U",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "N",
+      "events": [
+        {
+          "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1793491200000,
+            "gmtOffset": 0,
+            "label": "2026-11-01"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    }
+  ]
+}

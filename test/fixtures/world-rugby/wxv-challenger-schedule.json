@@ -1,0 +1,608 @@
+{
+  "event": {
+    "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+    "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+    "label": "WXV Global Series Challenger 2026",
+    "sport": "wru",
+    "start": {
+      "millis": 1789084800000,
+      "gmtOffset": 0,
+      "label": "2026-09-11"
+    },
+    "end": {
+      "millis": 1790294400000,
+      "gmtOffset": 0,
+      "label": "2026-09-25"
+    },
+    "abbr": "",
+    "winningTeam": null,
+    "eventStatus": {
+      "eventStatusID": 1,
+      "eventStatusName": "Scheduled"
+    },
+    "seriesId": null,
+    "seriesAltId": null,
+    "rankingsWeight": 0,
+    "metadata": {},
+    "impactPlayers": [
+      {
+        "position": 1,
+        "personId": "66077",
+        "personAltId": "1eb99e25-baea-4af8-b47e-a18fa51e4b25",
+        "personName": "Inger Jongerius",
+        "teamId": "2907",
+        "teamAltId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+        "teamName": "Netherlands",
+        "teamCode": "NED",
+        "tackles": 68,
+        "breaks": 0,
+        "offloads": 1,
+        "carries": 24,
+        "total": 94
+      },
+      {
+        "position": 2,
+        "personId": "76098",
+        "personAltId": "63aab381-ab67-4c50-947e-2eb9c923190c",
+        "personName": "Isa Prins",
+        "teamId": "2907",
+        "teamAltId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+        "teamName": "Netherlands",
+        "teamCode": "NED",
+        "tackles": 51,
+        "breaks": 0,
+        "offloads": 3,
+        "carries": 19,
+        "total": 76
+      },
+      {
+        "position": 3,
+        "personId": "b90bf7e4-237b-426f-8f28-94cece0d477d",
+        "personAltId": "b90bf7e4-237b-426f-8f28-94cece0d477d",
+        "personName": "Varanisese Qoro",
+        "teamId": "3385",
+        "teamAltId": "af00a3d7-7d3a-4c73-8080-3f11878fe11f",
+        "teamName": "Fiji",
+        "teamCode": "FIJ",
+        "tackles": 13,
+        "breaks": 5,
+        "offloads": 7,
+        "carries": 29,
+        "total": 71
+      },
+      {
+        "position": 3,
+        "personId": "66080",
+        "personAltId": "36dff35b-771e-48b1-9029-63a9dff9d11f",
+        "personName": "Nicky Dix",
+        "teamId": "2907",
+        "teamAltId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+        "teamName": "Netherlands",
+        "teamCode": "NED",
+        "tackles": 41,
+        "breaks": 0,
+        "offloads": 1,
+        "carries": 28,
+        "total": 71
+      },
+      {
+        "position": 5,
+        "personId": "60211",
+        "personAltId": "49b69b54-ada7-4b4a-ba10-3214c249abe8",
+        "personName": "Linde van der Velden",
+        "teamId": "2907",
+        "teamAltId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+        "teamName": "Netherlands",
+        "teamCode": "NED",
+        "tackles": 42,
+        "breaks": 0,
+        "offloads": 1,
+        "carries": 26,
+        "total": 70
+      },
+      {
+        "position": 6,
+        "personId": "45d432e2-7888-4d23-a140-29cca6707d0b",
+        "personAltId": "45d432e2-7888-4d23-a140-29cca6707d0b",
+        "personName": "Manuqalo Komaitai",
+        "teamId": "3385",
+        "teamAltId": "af00a3d7-7d3a-4c73-8080-3f11878fe11f",
+        "teamName": "Fiji",
+        "teamCode": "FIJ",
+        "tackles": 32,
+        "breaks": 0,
+        "offloads": 2,
+        "carries": 30,
+        "total": 66
+      },
+      {
+        "position": 7,
+        "personId": "76101",
+        "personAltId": "188cacfd-a046-40f3-b767-a1af1e0c2ae7",
+        "personName": "Mariet Luijken",
+        "teamId": "2907",
+        "teamAltId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+        "teamName": "Netherlands",
+        "teamCode": "NED",
+        "tackles": 34,
+        "breaks": 1,
+        "offloads": 1,
+        "carries": 26,
+        "total": 65
+      },
+      {
+        "position": 8,
+        "personId": "76799",
+        "personAltId": "5565e39a-31bf-4068-a3a6-d0e135827d78",
+        "personName": "Elisabeth Boot",
+        "teamId": "2907",
+        "teamAltId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+        "teamName": "Netherlands",
+        "teamCode": "NED",
+        "tackles": 41,
+        "breaks": 1,
+        "offloads": 1,
+        "carries": 17,
+        "total": 63
+      },
+      {
+        "position": 9,
+        "personId": "b293ff03-4698-4032-b333-b39a58322779",
+        "personAltId": "b293ff03-4698-4032-b333-b39a58322779",
+        "personName": "Merewairita Neivosa",
+        "teamId": "3385",
+        "teamAltId": "af00a3d7-7d3a-4c73-8080-3f11878fe11f",
+        "teamName": "Fiji",
+        "teamCode": "FIJ",
+        "tackles": 13,
+        "breaks": 2,
+        "offloads": 5,
+        "carries": 33,
+        "total": 62
+      },
+      {
+        "position": 10,
+        "personId": "76716",
+        "personAltId": "fd0c2e49-dd63-49b7-a7ac-3d05ea58d3f5",
+        "personName": "Tanya Dhar",
+        "teamId": "2966",
+        "teamAltId": "11ac07a9-d0a6-47e6-a714-388a9e3350be",
+        "teamName": "Hong Kong China",
+        "teamCode": "HKG",
+        "tackles": 39,
+        "breaks": 0,
+        "offloads": 0,
+        "carries": 22,
+        "total": 61
+      }
+    ],
+    "teamPerformances": []
+  },
+  "matches": [
+    {
+      "matchId": "cfd56f9d-de81-4395-ad01-2f5a4b87724b",
+      "matchAltId": "cfd56f9d-de81-4395-ad01-2f5a4b87724b",
+      "description": "Match 3",
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "altId": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "name": "Kai Tak Youth Sports Ground",
+        "city": "Hong Kong",
+        "country": "Hong Kong China"
+      },
+      "time": {
+        "millis": 1789297200000,
+        "gmtOffset": 8,
+        "label": "2026-09-13"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2907",
+          "altId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+          "name": "Netherlands",
+          "abbreviation": "NED",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2581",
+          "altId": "cd59cc1b-195c-4b72-b30f-d5f9270f9f29",
+          "name": "Samoa",
+          "abbreviation": "SAM",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        70,
+        0
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1790294400000,
+            "gmtOffset": 0,
+            "label": "2026-09-25"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "6685c1bb-e63e-4b83-8fdf-d1de43e02b00",
+      "matchAltId": "6685c1bb-e63e-4b83-8fdf-d1de43e02b00",
+      "description": "Match 4",
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "altId": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "name": "Kai Tak Youth Sports Ground",
+        "city": "Hong Kong",
+        "country": "Hong Kong China"
+      },
+      "time": {
+        "millis": 1789790400000,
+        "gmtOffset": 8,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2581",
+          "altId": "cd59cc1b-195c-4b72-b30f-d5f9270f9f29",
+          "name": "Samoa",
+          "abbreviation": "SAM",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2521",
+          "altId": "7f5eaef4-e9f7-41f5-ab93-18b9486bf96c",
+          "name": "Spain",
+          "abbreviation": "ESP",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        21,
+        61
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "B",
+      "events": [
+        {
+          "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1790294400000,
+            "gmtOffset": 0,
+            "label": "2026-09-25"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "4b41d516-db86-4880-8452-2cf3d6c8183f",
+      "matchAltId": "4b41d516-db86-4880-8452-2cf3d6c8183f",
+      "description": "Match 5",
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "altId": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "name": "Kai Tak Youth Sports Ground",
+        "city": "Hong Kong",
+        "country": "Hong Kong China"
+      },
+      "time": {
+        "millis": 1789803000000,
+        "gmtOffset": 8,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "3385",
+          "altId": "af00a3d7-7d3a-4c73-8080-3f11878fe11f",
+          "name": "Fiji",
+          "abbreviation": "FIJ",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2966",
+          "altId": "11ac07a9-d0a6-47e6-a714-388a9e3350be",
+          "name": "Hong Kong China",
+          "abbreviation": "HKG",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        54,
+        26
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "A",
+      "events": [
+        {
+          "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1790294400000,
+            "gmtOffset": 0,
+            "label": "2026-09-25"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "76b581f7-d782-41a6-b592-65912975dfdc",
+      "matchAltId": "76b581f7-d782-41a6-b592-65912975dfdc",
+      "description": "Match 6",
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "altId": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "name": "Kai Tak Youth Sports Ground",
+        "city": "Hong Kong",
+        "country": "Hong Kong China"
+      },
+      "time": {
+        "millis": 1789815600000,
+        "gmtOffset": 8,
+        "label": "2026-09-19"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "3396",
+          "altId": "d6286f4a-1c74-4be2-9bb7-9cb14d128293",
+          "name": "Brazil",
+          "abbreviation": "BRA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "2907",
+          "altId": "2012670c-48c5-4f8c-8006-6b319358dc1e",
+          "name": "Netherlands",
+          "abbreviation": "NED",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        15,
+        17
+      ],
+      "kc": null,
+      "status": "C",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "B",
+      "events": [
+        {
+          "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1790294400000,
+            "gmtOffset": 0,
+            "label": "2026-09-25"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    },
+    {
+      "matchId": "e8a88003-6164-427d-9f1d-85160ce6ce6f",
+      "matchAltId": "e8a88003-6164-427d-9f1d-85160ce6ce6f",
+      "description": "Match 9",
+      "eventPhase": null,
+      "eventPhaseId": null,
+      "venue": {
+        "id": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "altId": "f20d2bcd-9fbf-4352-b7cc-d32c1adf1569",
+        "name": "Kai Tak Youth Sports Ground",
+        "city": "Hong Kong",
+        "country": "Hong Kong China"
+      },
+      "time": {
+        "millis": 1790420400000,
+        "gmtOffset": 8,
+        "label": "2026-09-26"
+      },
+      "attendance": null,
+      "teams": [
+        {
+          "id": "2521",
+          "altId": "7f5eaef4-e9f7-41f5-ab93-18b9486bf96c",
+          "name": "Spain",
+          "abbreviation": "ESP",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        },
+        {
+          "id": "3396",
+          "altId": "d6286f4a-1c74-4be2-9bb7-9cb14d128293",
+          "name": "Brazil",
+          "abbreviation": "BRA",
+          "countryCode": null,
+          "annotations": null,
+          "metadata": {}
+        }
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "kc": null,
+      "status": "CC",
+      "clock": {
+        "secs": 0,
+        "label": "00:00"
+      },
+      "outcome": "N",
+      "events": [
+        {
+          "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+          "label": "WXV 2026",
+          "sport": "wru",
+          "start": {
+            "millis": 1789084800000,
+            "gmtOffset": 0,
+            "label": "2026-09-11"
+          },
+          "end": {
+            "millis": 1790294400000,
+            "gmtOffset": 0,
+            "label": "2026-09-25"
+          },
+          "abbr": null,
+          "winningTeam": null,
+          "eventStatus": {
+            "eventStatusID": 1,
+            "eventStatusName": "Scheduled"
+          },
+          "seriesId": null,
+          "seriesAltId": null,
+          "rankingsWeight": 0,
+          "metadata": {},
+          "impactPlayers": null,
+          "teamPerformances": null
+        }
+      ],
+      "sport": "WRU",
+      "competition": "WXV 2026",
+      "weather": null,
+      "rankingsWeight": null
+    }
+  ]
+}

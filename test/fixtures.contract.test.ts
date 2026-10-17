@@ -1,8 +1,9 @@
 /**
- * Contract: every field the ESPN adapter reads is present, with the right type,
+ * Contract: every field the ESPN and World Rugby adapters read is present, with the right type,
  * in every recorded event. A fixture that invents or drops a field fails here
  * instead of passing while the adapter reads a path real ESPN never sends.
- * Update this list together with `src/core/espn/adapter.ts`.
+ * Update this list together with `src/core/espn/adapter.ts` and
+ * `src/core/worldRugby/adapter.ts`.
  */
 import { describe, expect, it } from 'vitest';
 import gallagherHeader from './fixtures/espn/gallagher-premiership-header.json';
@@ -11,6 +12,12 @@ import nflHeader from './fixtures/espn/nfl-header.json';
 import sixNationsHeader from './fixtures/espn/six-nations-header.json';
 import top14Header from './fixtures/espn/top-14-header.json';
 import unitedRugbyChampionshipHeader from './fixtures/espn/united-rugby-championship-header.json';
+import worldRugbyEventsPage0 from './fixtures/world-rugby/events-page-0.json';
+import worldRugbyEventsPage1 from './fixtures/world-rugby/events-page-1.json';
+import pwrCupSchedule from './fixtures/world-rugby/pwr-cup-schedule.json';
+import pwrSchedule from './fixtures/world-rugby/pwr-schedule.json';
+import wxvChallengerSchedule from './fixtures/world-rugby/wxv-challenger-schedule.json';
+import wxvSchedule from './fixtures/world-rugby/wxv-schedule.json';
 import premierLeagueHeader from './fixtures/espn/premier-league-header.json';
 import scoreboard20260918 from './fixtures/espn/premier-league-scoreboard-20260918.json';
 import scoreboard20260919 from './fixtures/espn/premier-league-scoreboard-20260919.json';
@@ -92,6 +99,50 @@ describe('site scoreboard fixtures', () => {
             ),
           ],
           `event ${at(event, 'id')}`,
+        ).toEqual([]);
+      }
+    });
+  }
+});
+
+describe('World Rugby event list fixtures', () => {
+  const pages = { 'page 0': worldRugbyEventsPage0, 'page 1': worldRugbyEventsPage1 };
+  for (const [name, body] of Object.entries(pages)) {
+    it(`${name}: events carry every field the adapter reads`, () => {
+      expect(typeof body.pageInfo.numPages).toBe('number');
+      expect(body.content.length).toBeGreaterThan(0);
+      for (const event of body.content as unknown[]) {
+        expect(
+          violations(event, { id: 'string', label: 'string', 'start.label': 'string', 'end.label': 'string' }),
+          `event ${at(event, 'id')}`,
+        ).toEqual([]);
+      }
+    });
+  }
+});
+
+describe('World Rugby schedule fixtures', () => {
+  const schedules = {
+    pwr: pwrSchedule,
+    'pwr cup': pwrCupSchedule,
+    wxv: wxvSchedule,
+    'wxv challenger': wxvChallengerSchedule,
+  };
+  for (const [name, body] of Object.entries(schedules)) {
+    it(`${name}: matches carry every field the adapter reads`, () => {
+      expect(body.matches.length).toBeGreaterThan(0);
+      for (const match of body.matches as unknown[]) {
+        const teams = at(match, 'teams') as unknown[];
+        const scores = at(match, 'scores') as unknown[];
+        expect(teams).toHaveLength(2);
+        expect(scores).toHaveLength(2);
+        expect(
+          [
+            ...violations(match, { matchId: 'string', status: 'string', 'time.millis': 'number' }),
+            ...teams.flatMap((t) => violations(t, { name: 'string' })),
+            ...scores.flatMap((score, i) => (typeof score === 'number' ? [] : [`scores.${i}: expected number`])),
+          ],
+          `match ${at(match, 'matchId')}`,
         ).toEqual([]);
       }
     });
