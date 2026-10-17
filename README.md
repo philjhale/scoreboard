@@ -8,7 +8,7 @@ Requires Node 22+.
 
 ```sh
 npm install
-npm run dev       # Vite dev server at http://localhost:5173/sports-aggregator/
+npm run dev       # Vite dev server at http://localhost:5173/scoreboard/
 npm run build     # type-check and build to dist/
 npm run preview   # serve the built dist/ locally
 ```
