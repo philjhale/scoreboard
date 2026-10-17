@@ -1,4 +1,4 @@
-# sports-aggregator
+# scoreboard
 
 Shows summary of recent match results across several competitions using [ESPN's free unofficial API](https://github.com/pseudo-r/Public-ESPN-API), and World Rugby's unofficial API for women's rugby. This was created as a playground for testing some of [Matt Pocock's skills](https://www.aihero.dev/skills) like `/pr` and `/implement-spec`.
 
