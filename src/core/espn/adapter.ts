@@ -7,7 +7,8 @@
  * - the scoreboard header (`sports[0].leagues[0].events`), fetched once per Window;
  * - the site scoreboard (`events[].competitions[0]`), fetched once per day as a fallback.
  */
-import type { Competition, EspnSource, LocalDate, Result, Team, Winner } from '../types';
+import { at, getJson, str, winnerOf } from '../adapterUtils';
+import type { EspnCompetition, EspnSource, LocalDate, Result, Team } from '../types';
 import { compactDate } from '../window';
 
 class EspnParseError extends Error {}
@@ -22,12 +23,11 @@ class EspnParseError extends Error {}
  */
 export async function fetchResults(
   fetchFn: typeof fetch,
-  competition: Competition,
+  competition: EspnCompetition,
   dates: LocalDate[],
   timeZone: string,
 ): Promise<Result[]> {
   const { source } = competition;
-  if (source.kind !== 'espn') throw new Error(`${competition.id} is not an ESPN Competition`);
   try {
     return parseHeader(await getJson(fetchFn, headerUrl(source, dates, timeZone)), competition);
   } catch {
@@ -41,12 +41,6 @@ export async function fetchResults(
     );
     return dedupe(days.flat());
   }
-}
-
-async function getJson(fetchFn: typeof fetch, url: string): Promise<unknown> {
-  const response = await fetchFn(url, { signal: AbortSignal.timeout(10_000) });
-  if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
-  return response.json();
 }
 
 /** Per-day responses can overlap; keep the first Result for each id. */
@@ -76,7 +70,7 @@ function siteScoreboardUrl(source: EspnSource, date: LocalDate, timeZone: string
 }
 
 /** Parse the scoreboard header shape (`sports[0].leagues[0].events`). */
-function parseHeader(body: unknown, competition: Competition): Result[] {
+function parseHeader(body: unknown, competition: EspnCompetition): Result[] {
   const events = at(body, 'sports', 0, 'leagues', 0, 'events');
   if (!Array.isArray(events)) throw new EspnParseError('Unexpected ESPN header response');
   return parseEvents(events, competition, (event) => ({
@@ -98,7 +92,7 @@ function parseHeader(body: unknown, competition: Competition): Result[] {
 }
 
 /** Parse the site scoreboard shape (`events[].competitions[0]`). */
-function parseSiteScoreboard(body: unknown, competition: Competition): Result[] {
+function parseSiteScoreboard(body: unknown, competition: EspnCompetition): Result[] {
   const events = at(body, 'events');
   if (!Array.isArray(events)) throw new EspnParseError('Unexpected ESPN scoreboard response');
   return parseEvents(events, competition, (event) => {
@@ -143,7 +137,7 @@ interface RawCompetitor {
 
 function parseEvents(
   events: unknown[],
-  competition: Competition,
+  competition: EspnCompetition,
   read: (event: unknown) => RawEvent,
 ): Result[] {
   return events.flatMap((event) => {
@@ -165,10 +159,8 @@ const DROPPED_STATUSES = new Set([
   'STATUS_ABANDONED',
 ]);
 
-function toResult(event: RawEvent, competition: Competition): Result | undefined {
+function toResult(event: RawEvent, competition: EspnCompetition): Result | undefined {
   const { id, kickoff, statusType } = event;
-  const { source } = competition;
-  if (source.kind !== 'espn') return undefined;
   if (!id || !kickoff || Number.isNaN(Date.parse(kickoff))) return undefined;
   if (!isFinished(statusType, event.state)) return undefined;
 
@@ -184,7 +176,7 @@ function toResult(event: RawEvent, competition: Competition): Result | undefined
     home,
     away,
     ...(extraTime ? { extraTime } : {}),
-    matchDetailsUrl: event.link ?? fallbackMatchDetailsUrl(source, id),
+    matchDetailsUrl: event.link ?? fallbackMatchDetailsUrl(competition.source, id),
     winner: winnerOf(home, away),
   };
 }
@@ -223,11 +215,6 @@ function webLink(links: unknown): string | undefined {
   return str(at(summary, 'href'));
 }
 
-function winnerOf(home: Team, away: Team): Winner {
-  if (home.score === away.score) return 'draw';
-  return home.score > away.score ? 'home' : 'away';
-}
-
 /** "Final/OT" → "OT", "Final/2OT" → "2OT", "AET" → "AET", "FT-Pens" → "Pens". */
 function extraTimeMarker(detail: string | undefined): string | undefined {
   if (!detail) return undefined;
@@ -254,19 +241,6 @@ function fallbackMatchDetailsUrl(source: EspnSource, id: string): string {
   }
 }
 
-function at(value: unknown, ...path: (string | number)[]): unknown {
-  let current = value;
-  for (const key of path) {
-    if (current === null || typeof current !== 'object') return undefined;
-    current = (current as Record<string | number, unknown>)[key];
-  }
-  return current;
-}
-
 function list(value: unknown): unknown[] | undefined {
   return Array.isArray(value) ? value : undefined;
-}
-
-function str(value: unknown): string | undefined {
-  return typeof value === 'string' && value !== '' ? value : undefined;
 }

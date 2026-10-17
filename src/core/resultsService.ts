@@ -9,7 +9,7 @@
  */
 import { loadWithPastDayCache } from './cache';
 import { fetchResults as fetchEspnResults } from './espn/adapter';
-import type { Competition, LocalDate, Result, WindowDays } from './types';
+import type { Competition, LocalDate, Result, WindowDays, WorldRugbyCompetition } from './types';
 import { resolveWindow } from './window';
 import { createWorldRugbyFetcher } from './worldRugby/adapter';
 
@@ -30,10 +30,15 @@ export interface ResultsService {
   loadCompetition(competition: Competition, days: WindowDays): Promise<CompetitionOutcome>;
 }
 
+function isWorldRugby(competition: Competition): competition is WorldRugbyCompetition {
+  return competition.source.kind === 'world-rugby';
+}
+
 export function createResultsService(deps: ResultsServiceDeps): ResultsService {
   const fetchWorldRugby = createWorldRugbyFetcher(deps.fetch);
+  // The one place that picks an adapter for a Competition's source.
   const fetchResults = (competition: Competition, dates: LocalDate[]) =>
-    competition.source.kind === 'world-rugby'
+    isWorldRugby(competition)
       ? fetchWorldRugby(competition, dates, deps.timeZone)
       : fetchEspnResults(deps.fetch, competition, dates, deps.timeZone);
   return {

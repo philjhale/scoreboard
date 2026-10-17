@@ -139,7 +139,13 @@ describe('World Rugby schedule fixtures', () => {
         expect(
           [
             ...violations(match, { matchId: 'string', status: 'string', 'time.millis': 'number' }),
-            ...teams.flatMap((t) => violations(t, { name: 'string' })),
+            ...teams.flatMap((t) => [
+              ...violations(t, { name: 'string' }),
+              // The short name is `null` for some teams (the adapter then uses the name).
+              ...(at(t, 'abbreviation') === null || typeof at(t, 'abbreviation') === 'string'
+                ? []
+                : [`abbreviation: expected string or null, got ${typeof at(t, 'abbreviation')}`]),
+            ]),
             ...scores.flatMap((score, i) => (typeof score === 'number' ? [] : [`scores.${i}: expected number`])),
           ],
           `match ${at(match, 'matchId')}`,

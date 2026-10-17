@@ -59,7 +59,7 @@ export const competitionConfig: CompetitionConfig = {
     {
       id: 'premiership-womens-rugby',
       sportId: 'womens-rugby-union',
-      name: 'Premiership Women\'s Rugby',
+      name: "Premiership Women's Rugby",
       source: { kind: 'world-rugby', eventName: 'PWR' },
     },
     {

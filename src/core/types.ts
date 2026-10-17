@@ -26,14 +26,21 @@ export interface WorldRugbySource {
   eventName: string;
 }
 
-export type CompetitionSource = EspnSource | WorldRugbySource;
-
-export interface Competition {
+interface CompetitionBase {
   id: string;
   sportId: string;
   name: string;
-  source: CompetitionSource;
 }
+
+export interface EspnCompetition extends CompetitionBase {
+  source: EspnSource;
+}
+
+export interface WorldRugbyCompetition extends CompetitionBase {
+  source: WorldRugbySource;
+}
+
+export type Competition = EspnCompetition | WorldRugbyCompetition;
 
 export interface CompetitionConfig {
   sports: Sport[];

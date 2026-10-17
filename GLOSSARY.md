@@ -12,6 +12,14 @@ _Avoid_: Category, game type
 A named league or tournament within a Sport whose matches are summarised, such as the NBA or the Premier League. It is the unit added to extend coverage.
 _Avoid_: League, tournament, feed
 
+**Source**:
+The provider a Competition's Results are fetched from, such as ESPN or World Rugby. Each Source has its own adapter that turns its responses into Results. A Competition names its Source in config.
+_Avoid_: Feed, provider, API
+
+**Edition**:
+One season's run of a Competition at a Source, such as PWR 2026. Some Sources (World Rugby) give every Edition a new id each season, so the app looks it up by name rather than configuring it.
+_Avoid_: Season, event
+
 **Result**:
 The outcome of one finished match in a Competition: the two teams, their final scores and the match date.
 _Avoid_: Score, game, fixture, event
