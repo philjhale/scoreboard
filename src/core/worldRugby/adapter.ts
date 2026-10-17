@@ -7,7 +7,8 @@
  * Unlike ESPN there is no date-range query. A Competition's event (one
  * edition) has an id that changes every season, so it is resolved from the
  * event list by label, then its whole schedule is fetched and filtered to the
- * Window client-side.
+ * Window client-side. A day cached by the past-day cache stays as fetched, so a
+ * match World Rugby only marks completed after two days is missed.
  */
 import { at, getJson, str, winnerOf } from '../adapterUtils';
 import type { LocalDate, Result, Team, WorldRugbyCompetition } from '../types';

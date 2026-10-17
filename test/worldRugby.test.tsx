@@ -104,6 +104,41 @@ describe('Women’s rugby Results from World Rugby', () => {
   });
 });
 
+describe('Kick-off days in the viewer’s timezone', () => {
+  const wxvSchedule = defaultWorldRugbyFixtures.schedules[WXV_ID]! as { matches: { time: { millis: number } }[] };
+  const kickingOffAt = (...instants: string[]) => ({
+    ...defaultWorldRugbyFixtures,
+    schedules: {
+      ...defaultWorldRugbyFixtures.schedules,
+      [WXV_ID]: {
+        ...wxvSchedule,
+        matches: instants.map((instant, i) => ({
+          ...wxvSchedule.matches[i]!,
+          time: { ...wxvSchedule.matches[i]!.time, millis: Date.parse(instant) },
+        })),
+      },
+    },
+  });
+
+  // The default Window ends 19 Sep and covers 3 local days. In London (BST) a
+  // kick-off at 23:30Z on the 16th is already the 17th, but 22:30Z is still the 16th.
+  it('includes a late kick-off that is the first Window day locally but the day before in UTC', async () => {
+    const espn = createFakeEspn({ worldRugby: kickingOffAt('2026-09-16T23:30:00Z') });
+    renderApp({ espn, now: WXV_NOW });
+
+    const wxv = await settled('WXV');
+    expect(wxv.getAllByRole('listitem')).toHaveLength(1);
+  });
+
+  it('leaves out a late kick-off that is the day before the Window locally', async () => {
+    const espn = createFakeEspn({ worldRugby: kickingOffAt('2026-09-16T22:30:00Z') });
+    renderApp({ espn, now: WXV_NOW });
+
+    const wxv = await settled('WXV');
+    expect(wxv.queryByRole('listitem')).not.toBeInTheDocument();
+  });
+});
+
 describe('Fetching from World Rugby', () => {
   it('lists the events once for every Competition, then fetches only the schedules in the Window', async () => {
     const espn = createFakeEspn();

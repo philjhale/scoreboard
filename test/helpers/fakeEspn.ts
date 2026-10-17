@@ -79,6 +79,15 @@ export const defaultWorldRugbyFixtures: WorldRugbyFixtures = {
 
 const WORLD_RUGBY_HOST = 'api.wr-rims-prod.pulselive.com';
 
+/** Like the real API, only list events that start within `startDate`..`endDate`. */
+function eventsStartingWithin(page: unknown, startDate: string | null, endDate: string | null): unknown {
+  const { content, ...rest } = page as { content: { start: { label: string } }[] };
+  const within = content.filter(
+    (e) => (!startDate || e.start.label >= startDate) && (!endDate || e.start.label <= endDate),
+  );
+  return { ...rest, content: within };
+}
+
 export function createFakeEspn(options: FakeEspnOptions = {}): FakeEspn {
   const header = options.header ?? defaultHeaderFixtures;
   const scoreboard = options.scoreboard ?? defaultScoreboardFixtures;
@@ -93,7 +102,8 @@ export function createFakeEspn(options: FakeEspnOptions = {}): FakeEspn {
       if (url.pathname === '/rugby/v3/event') {
         const body = worldRugby.events[Number(url.searchParams.get('page'))];
         // Past the last page the API answers with an empty list.
-        return json(body ?? { pageInfo: { page: 0, numPages: 0, pageSize: 100, numEntries: 0 }, content: [] });
+        if (!body) return json({ pageInfo: { page: 0, numPages: 0, pageSize: 100, numEntries: 0 }, content: [] });
+        return json(eventsStartingWithin(body, url.searchParams.get('startDate'), url.searchParams.get('endDate')));
       }
       const schedule = url.pathname.match(/^\/rugby\/v3\/event\/([^/]+)\/schedule$/);
       const body = schedule && worldRugby.schedules[schedule[1]!];

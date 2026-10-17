@@ -146,6 +146,10 @@ describe('World Rugby schedule fixtures', () => {
                 ? []
                 : [`abbreviation: expected string or null, got ${typeof at(t, 'abbreviation')}`]),
             ]),
+            // `outcome` is not read (the winner comes from the scores, as for ESPN), but it must agree with them.
+            ...((at(match, 'status') === 'C' && at(match, 'outcome') !== (scores[0]! > scores[1]! ? 'A' : scores[0]! < scores[1]! ? 'B' : at(match, 'outcome')))
+              ? ['outcome disagrees with scores']
+              : []),
             ...scores.flatMap((score, i) => (typeof score === 'number' ? [] : [`scores.${i}: expected number`])),
           ],
           `match ${at(match, 'matchId')}`,
