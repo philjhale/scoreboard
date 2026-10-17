@@ -49,7 +49,7 @@ export function App({ deps, config = competitionConfig }: AppProps) {
   return (
     <div className="app">
       <header>
-        <h1>Sports Aggregator</h1>
+        <h1>Scoreboard</h1>
         <WindowSelector value={windowDays} onChange={changeWindow} />
         <button type="button" onClick={() => setRefreshCount((n) => n + 1)}>
           Refresh
