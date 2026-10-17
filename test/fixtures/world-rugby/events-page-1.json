@@ -1,0 +1,94 @@
+{
+  "pageInfo": {
+    "page": 1,
+    "numPages": 2,
+    "pageSize": 100,
+    "numEntries": 157
+  },
+  "content": [
+    {
+      "id": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+      "altId": "14de5b79-3cda-4025-8150-843fa3f19ee8",
+      "label": "WXV Global Series 2026",
+      "sport": "wru",
+      "start": {
+        "millis": 1789084800000,
+        "gmtOffset": 0,
+        "label": "2026-09-11"
+      },
+      "end": {
+        "millis": 1793491200000,
+        "gmtOffset": 0,
+        "label": "2026-11-01"
+      },
+      "abbr": "",
+      "winningTeam": null,
+      "eventStatus": {
+        "eventStatusID": 1,
+        "eventStatusName": "Scheduled"
+      },
+      "seriesId": null,
+      "seriesAltId": null,
+      "rankingsWeight": 0,
+      "metadata": {},
+      "impactPlayers": null,
+      "teamPerformances": null
+    },
+    {
+      "id": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+      "altId": "24bf7f35-5e9f-487b-916d-eab79e4453fb",
+      "label": "WXV Global Series Challenger 2026",
+      "sport": "wru",
+      "start": {
+        "millis": 1789084800000,
+        "gmtOffset": 0,
+        "label": "2026-09-11"
+      },
+      "end": {
+        "millis": 1790294400000,
+        "gmtOffset": 0,
+        "label": "2026-09-25"
+      },
+      "abbr": "",
+      "winningTeam": null,
+      "eventStatus": {
+        "eventStatusID": 1,
+        "eventStatusName": "Scheduled"
+      },
+      "seriesId": null,
+      "seriesAltId": null,
+      "rankingsWeight": 0,
+      "metadata": {},
+      "impactPlayers": null,
+      "teamPerformances": null
+    },
+    {
+      "id": "5ad2f75b-c8ed-401a-96ca-1109149237a2",
+      "altId": "5ad2f75b-c8ed-401a-96ca-1109149237a2",
+      "label": "PWR Cup 2026",
+      "sport": "wru",
+      "start": {
+        "millis": 1789772400000,
+        "gmtOffset": 1,
+        "label": "2026-09-19"
+      },
+      "end": {
+        "millis": 1794096000000,
+        "gmtOffset": 0,
+        "label": "2026-11-08"
+      },
+      "abbr": "",
+      "winningTeam": null,
+      "eventStatus": {
+        "eventStatusID": 1,
+        "eventStatusName": "Scheduled"
+      },
+      "seriesId": null,
+      "seriesAltId": null,
+      "rankingsWeight": 0,
+      "metadata": {},
+      "impactPlayers": null,
+      "teamPerformances": null
+    }
+  ]
+}

@@ -8,9 +8,10 @@
  * The outside world (fetch, clock, timezone, storage) is injected.
  */
 import { loadWithPastDayCache } from './cache';
-import { fetchResults } from './espn/adapter';
-import type { Competition, LocalDate, Result, WindowDays } from './types';
+import { fetchResults as fetchEspnResults } from './espn/adapter';
+import type { Competition, LocalDate, Result, WindowDays, WorldRugbyCompetition } from './types';
 import { resolveWindow } from './window';
+import { createWorldRugbyFetcher } from './worldRugby/adapter';
 
 export type CompetitionOutcome =
   | { status: 'results'; results: Result[] }
@@ -29,12 +30,21 @@ export interface ResultsService {
   loadCompetition(competition: Competition, days: WindowDays): Promise<CompetitionOutcome>;
 }
 
+function isWorldRugby(competition: Competition): competition is WorldRugbyCompetition {
+  return competition.source.kind === 'world-rugby';
+}
+
 export function createResultsService(deps: ResultsServiceDeps): ResultsService {
+  const fetchWorldRugby = createWorldRugbyFetcher(deps.fetch);
+  // The one place that picks an adapter for a Competition's source.
+  const fetchResults = (competition: Competition, dates: LocalDate[]) =>
+    isWorldRugby(competition)
+      ? fetchWorldRugby(competition, dates, deps.timeZone)
+      : fetchEspnResults(deps.fetch, competition, dates, deps.timeZone);
   return {
     async loadCompetition(competition, days) {
       const window = resolveWindow(days, deps.now(), deps.timeZone);
-      const fetchDates = (dates: LocalDate[]) =>
-        fetchResults(deps.fetch, competition, dates, deps.timeZone);
+      const fetchDates = (dates: LocalDate[]) => fetchResults(competition, dates);
       try {
         const results = (
           await loadWithPastDayCache(window.dates, fetchDates, {

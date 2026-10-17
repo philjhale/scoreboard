@@ -10,6 +10,7 @@ export const competitionConfig: CompetitionConfig = {
     { id: 'american-football', name: 'American Football', order: 2 },
     { id: 'football', name: 'Football', order: 3 },
     { id: 'rugby-union', name: 'Rugby Union', order: 4 },
+    { id: 'womens-rugby-union', name: "Women's Rugby Union", order: 5 },
   ],
   competitions: [
     {
@@ -54,6 +55,30 @@ export const competitionConfig: CompetitionConfig = {
       sportId: 'rugby-union',
       name: 'Six Nations',
       source: { kind: 'espn', sport: 'rugby', league: '180659' },
+    },
+    {
+      id: 'premiership-womens-rugby',
+      sportId: 'womens-rugby-union',
+      name: "Premiership Women's Rugby",
+      source: { kind: 'world-rugby', eventName: 'PWR' },
+    },
+    {
+      id: 'pwr-cup',
+      sportId: 'womens-rugby-union',
+      name: 'PWR Cup',
+      source: { kind: 'world-rugby', eventName: 'PWR Cup' },
+    },
+    {
+      id: 'wxv',
+      sportId: 'womens-rugby-union',
+      name: 'WXV',
+      source: { kind: 'world-rugby', eventName: 'WXV Global Series' },
+    },
+    {
+      id: 'wxv-challenger',
+      sportId: 'womens-rugby-union',
+      name: 'WXV Challenger',
+      source: { kind: 'world-rugby', eventName: 'WXV Global Series Challenger' },
     },
   ],
 };
