@@ -53,7 +53,7 @@ describe('Past-day cache', () => {
     expect(await within(nba).findByText('Miami Heat')).toBeInTheDocument();
     expect(within(nba).getByText('Atlanta Hawks')).toBeInTheDocument();
     expect(within(nba).getByText('Golden State Warriors')).toBeInTheDocument();
-    expect(espn.headerRequests()).toHaveLength(4);
+    expect(espn.headerRequests()).toHaveLength(7);
     // Past days with no Results are not cached, so the span still starts at the first of them.
     expect(nbaHeaderRequests(espn).map((u) => u.searchParams.get('dates'))).toEqual([
       '20261001-20261007',
@@ -140,11 +140,11 @@ describe('Manual refresh', () => {
     const { espn, user } = renderApp();
     const nba = screen.getByRole('region', { name: 'NBA' });
     await within(nba).findByText('Golden State Warriors');
-    await waitFor(() => expect(espn.headerRequests()).toHaveLength(4));
+    await waitFor(() => expect(espn.headerRequests()).toHaveLength(7));
 
     await user.click(screen.getByRole('button', { name: 'Refresh' }));
 
-    await waitFor(() => expect(espn.headerRequests()).toHaveLength(8));
+    await waitFor(() => expect(espn.headerRequests()).toHaveLength(14));
     expect(nbaHeaderRequests(espn).map((u) => u.searchParams.get('dates'))).toEqual([
       '20261005-20261007',
       '20261005-20261007',

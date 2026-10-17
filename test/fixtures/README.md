@@ -13,8 +13,11 @@ Recorded 7 Oct 2026, `tz=Europe/London`:
 | NFL | 4-6 Oct | Chiefs at Raiders (before the default Window), Lions at Panthers, Falcons at Saints |
 | Premier League | 14-20 Sep | Leeds v Newcastle (before the Window), then Brentford, Spurs, Man City and a Fulham 1-1 Man Utd draw. Site scoreboard fallback for 18-20 Sep |
 | Gallagher Premiership | 2-4 Oct | Three finals |
+| United Rugby Championship | 2-3 Oct | Connacht v Benetton, Leinster v Sharks, Bulls v Munster |
+| Top 14 | 3-4 Oct | Perpignan v Racing 92, Stade Toulousain v Castres, Toulon v Montpellier |
+| Six Nations | 7-14 Mar | England v Italy (before the Window), then the three matches of 14 Mar |
 
-The default test clock is 7 Oct 2026, Europe/London (Window 5-7 Oct). The Premier League paused 1-7 Oct and the Gallagher Premiership played nothing 5-7 Oct, so those tests set `PREMIER_LEAGUE_NOW` (18-20 Sep) or `GALLAGHER_NOW` (2-4 Oct).
+The default test clock is 7 Oct 2026, Europe/London (Window 5-7 Oct). The Premier League paused 1-7 Oct and the rugby leagues played nothing 5-7 Oct, so those tests set `PREMIER_LEAGUE_NOW` (18-20 Sep), `GALLAGHER_NOW` (2-4 Oct, also used for the URC and Top 14) or `SIX_NATIONS_NOW` (12-14 Mar).
 
 ## What a recording cannot hold
 

@@ -28,6 +28,8 @@ export const DEFAULT_NOW = '2026-10-07T12:00:00Z';
 export const PREMIER_LEAGUE_NOW = '2026-09-20T18:00:00Z';
 /** Window 2-4 Oct in Europe/London: the recorded Gallagher Premiership matches. */
 export const GALLAGHER_NOW = '2026-10-04T20:00:00Z';
+/** Window 12-14 Mar in Europe/London: the recorded Six Nations final round. */
+export const SIX_NATIONS_NOW = '2026-03-14T23:00:00Z';
 
 /**
  * Renders the whole app with only the outside world faked: ESPN (fetch),

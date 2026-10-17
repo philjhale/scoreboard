@@ -2,6 +2,9 @@ import gallagherPremiershipHeader from '../fixtures/espn/gallagher-premiership-h
 import nbaHeader from '../fixtures/espn/nba-header.json';
 import nflHeader from '../fixtures/espn/nfl-header.json';
 import premierLeagueHeader from '../fixtures/espn/premier-league-header.json';
+import sixNationsHeader from '../fixtures/espn/six-nations-header.json';
+import top14Header from '../fixtures/espn/top-14-header.json';
+import unitedRugbyChampionshipHeader from '../fixtures/espn/united-rugby-championship-header.json';
 import premierLeague20260918 from '../fixtures/espn/premier-league-scoreboard-20260918.json';
 import premierLeague20260919 from '../fixtures/espn/premier-league-scoreboard-20260919.json';
 import premierLeague20260920 from '../fixtures/espn/premier-league-scoreboard-20260920.json';
@@ -35,6 +38,9 @@ export const defaultHeaderFixtures: Record<string, unknown> = {
   'football/nfl': nflHeader,
   'soccer/eng.1': premierLeagueHeader,
   'rugby/267979': gallagherPremiershipHeader,
+  'rugby/270557': unitedRugbyChampionshipHeader,
+  'rugby/270559': top14Header,
+  'rugby/180659': sixNationsHeader,
 };
 
 export const defaultScoreboardFixtures: Record<string, unknown> = {

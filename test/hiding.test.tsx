@@ -22,6 +22,9 @@ describe('Hiding Competitions', () => {
       ['American Football', 'NFL'],
       ['Football', 'Premier League'],
       ['Rugby Union', 'Gallagher Premiership'],
+      ['Rugby Union', 'United Rugby Championship'],
+      ['Rugby Union', 'Top 14'],
+      ['Rugby Union', 'Six Nations'],
     ]) {
       const group = within(panel.getByRole('group', { name: sport }));
       expect(group.getByRole('checkbox', { name: competition })).toBeChecked();
@@ -58,7 +61,9 @@ describe('Hiding Competitions', () => {
     const { user } = renderApp();
     const panel = within(await openCompetitionsPanel(user));
 
-    await user.click(panel.getByRole('checkbox', { name: 'Gallagher Premiership' }));
+    for (const name of ['Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']) {
+      await user.click(panel.getByRole('checkbox', { name }));
+    }
 
     expect(screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent)).toEqual([
       'Basketball',
@@ -72,7 +77,7 @@ describe('Hiding Competitions', () => {
     const panel = within(await openCompetitionsPanel(user));
     expect(screen.queryByText(/All Competitions are hidden/)).not.toBeInTheDocument();
 
-    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership']) {
+    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']) {
       await user.click(panel.getByRole('checkbox', { name }));
     }
 
@@ -92,7 +97,7 @@ describe('Remembering hidden Competitions', () => {
 
     expect(screen.queryByRole('region', { name: 'NBA' })).not.toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: 'Basketball' })).not.toBeInTheDocument();
-    await waitFor(() => expect(espn.headerRequests()).toHaveLength(3));
+    await waitFor(() => expect(espn.headerRequests()).toHaveLength(6));
     expect(requestedLeagues(espn)).not.toContain('nba');
     const reopened = within(await openCompetitionsPanel(user));
     expect(reopened.getByRole('checkbox', { name: 'NBA' })).not.toBeChecked();
@@ -119,10 +124,10 @@ describe('Remembering hidden Competitions', () => {
     const { espn, user, unmount } = renderApp({ storage });
 
     expect(screen.queryByRole('region', { name: 'Premier League' })).not.toBeInTheDocument();
-    for (const name of ['NBA', 'NFL', 'Gallagher Premiership']) {
+    for (const name of ['NBA', 'NFL', 'Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']) {
       expect(screen.getByRole('region', { name })).toBeInTheDocument();
     }
-    await waitFor(() => expect(espn.headerRequests()).toHaveLength(3));
+    await waitFor(() => expect(espn.headerRequests()).toHaveLength(6));
 
     // Unhiding the last hidden Competition leaves nothing hidden on the next visit.
     const panel = within(await openCompetitionsPanel(user));
@@ -130,7 +135,7 @@ describe('Remembering hidden Competitions', () => {
     unmount();
 
     renderApp({ storage });
-    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership']) {
+    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']) {
       expect(screen.getByRole('region', { name })).toBeInTheDocument();
     }
   });
@@ -142,10 +147,10 @@ describe('Remembering hidden Competitions', () => {
   ])('shows every Competition, and can still hide one, with %s', async (_, storage) => {
     const { espn, user } = renderApp({ storage });
 
-    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership']) {
+    for (const name of ['NBA', 'NFL', 'Premier League', 'Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']) {
       expect(screen.getByRole('region', { name })).toBeInTheDocument();
     }
-    await waitFor(() => expect(espn.headerRequests()).toHaveLength(4));
+    await waitFor(() => expect(espn.headerRequests()).toHaveLength(7));
 
     const panel = within(await openCompetitionsPanel(user));
     await user.click(panel.getByRole('checkbox', { name: 'NBA' }));

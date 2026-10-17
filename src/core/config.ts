@@ -37,5 +37,23 @@ export const competitionConfig: CompetitionConfig = {
       // ESPN identifies this league by a numeric id, not a readable slug.
       source: { kind: 'espn', sport: 'rugby', league: '267979' },
     },
+    {
+      id: 'united-rugby-championship',
+      sportId: 'rugby-union',
+      name: 'United Rugby Championship',
+      source: { kind: 'espn', sport: 'rugby', league: '270557' },
+    },
+    {
+      id: 'top-14',
+      sportId: 'rugby-union',
+      name: 'Top 14',
+      source: { kind: 'espn', sport: 'rugby', league: '270559' },
+    },
+    {
+      id: 'six-nations',
+      sportId: 'rugby-union',
+      name: 'Six Nations',
+      source: { kind: 'espn', sport: 'rugby', league: '180659' },
+    },
   ],
 };

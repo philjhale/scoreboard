@@ -7,7 +7,7 @@ import nflHeader from './fixtures/espn/nfl-header.json';
 import premierLeagueHeader from './fixtures/espn/premier-league-header.json';
 import { createFakeEspn, defaultHeaderFixtures } from './helpers/fakeEspn';
 import { IN_PROGRESS, POSTPONED, SCHEDULED, withHeaderStatus } from './helpers/patchEspn';
-import { GALLAGHER_NOW, PREMIER_LEAGUE_NOW, renderApp } from './helpers/renderApp';
+import { GALLAGHER_NOW, PREMIER_LEAGUE_NOW, SIX_NATIONS_NOW, renderApp } from './helpers/renderApp';
 
 function sportHeadings() {
   return screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent);
@@ -18,7 +18,7 @@ async function resultRows(competition: string) {
   return within(region).findAllByRole('listitem');
 }
 
-describe('All four launch Competitions grouped by Sport', () => {
+describe('All launch Competitions grouped by Sport', () => {
   it('shows the Sports in config order', () => {
     renderApp();
 
@@ -28,17 +28,17 @@ describe('All four launch Competitions grouped by Sport', () => {
   it('groups each Competition under its Sport', () => {
     renderApp();
 
-    const expected: [string, string][] = [
-      ['Basketball', 'NBA'],
-      ['American Football', 'NFL'],
-      ['Football', 'Premier League'],
-      ['Rugby Union', 'Gallagher Premiership'],
+    const expected: [string, string[]][] = [
+      ['Basketball', ['NBA']],
+      ['American Football', ['NFL']],
+      ['Football', ['Premier League']],
+      ['Rugby Union', ['Gallagher Premiership', 'United Rugby Championship', 'Top 14', 'Six Nations']],
     ];
-    for (const [sport, competition] of expected) {
+    for (const [sport, competitions] of expected) {
       const section = screen.getByRole('region', { name: sport });
-      expect(within(section).getAllByRole('heading', { level: 3 }).map((h) => h.textContent)).toEqual([
-        competition,
-      ]);
+      expect(within(section).getAllByRole('heading', { level: 3 }).map((h) => h.textContent)).toEqual(
+        competitions,
+      );
     }
   });
 });
@@ -96,6 +96,9 @@ describe('Results within each Competition', () => {
       ['Fulham', 'Manchester City', 'Tottenham Hotspur', 'Brentford'],
     ],
     ['Gallagher Premiership', GALLAGHER_NOW, ['Saracens', 'Gloucester Rugby', 'Bath Rugby']],
+    ['United Rugby Championship', GALLAGHER_NOW, ['Bulls', 'Leinster', 'Connacht']],
+    ['Top 14', GALLAGHER_NOW, ['Toulon', 'Stade Toulousain', 'Perpignan']],
+    ['Six Nations', SIX_NATIONS_NOW, ['England', 'Italy', 'Scotland']],
   ])('shows finished %s Results in the Window, newest first', async (competition, now, homeTeams) => {
     renderApp({ now });
 
@@ -165,14 +168,17 @@ describe('Fetching the Competitions', () => {
     };
     renderApp({ espn: { ...espn, fetch: pending } });
 
-    await waitFor(() => expect(requested).toHaveLength(4));
+    await waitFor(() => expect(requested).toHaveLength(7));
     expect(requested.map((u) => u.pathname)).toEqual(
-      Array(4).fill('/apis/v2/scoreboard/header'),
+      Array(7).fill('/apis/v2/scoreboard/header'),
     );
     expect(requested.map((u) => `${u.searchParams.get('sport')}/${u.searchParams.get('league')}`).sort()).toEqual([
       'basketball/nba',
       'football/nfl',
+      'rugby/180659',
       'rugby/267979',
+      'rugby/270557',
+      'rugby/270559',
       'soccer/eng.1',
     ]);
   });
