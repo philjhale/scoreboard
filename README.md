@@ -24,7 +24,7 @@ The app calls ESPN directly from the browser, so the dev server needs internet a
 
 Everything lives in `src/core/config.ts`. No other code changes are needed.
 
-- **Competition**: add an entry to `competitions` with a unique `id`, the `sportId` of an existing Sport, a display `name`, and the ESPN `source` slugs. The slugs are the `{sport}/{league}` parts of ESPN's API URLs (e.g. `soccer/eng.1`). Some leagues use a numeric id (Gallagher Premiership is `rugby/267979`).
+- **Competition**: add an entry to `competitions` with a unique `id`, the `sportId` of an existing Sport, a display `name`, and the ESPN `source` slugs. The slugs are the `{sport}/{league}` parts of ESPN's API URLs (e.g. `soccer/eng.1`). Some leagues use a numeric id (Gallagher Premiership is `rugby/267979`, United Rugby Championship `rugby/270557`, Top 14 `rugby/270559`, Six Nations `rugby/180659`).
 
   ```ts
   {

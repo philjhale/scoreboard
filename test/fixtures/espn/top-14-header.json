@@ -1,0 +1,571 @@
+{
+  "sports": [
+    {
+      "id": "300",
+      "uid": "s:300",
+      "guid": "09520a45-ed08-3eab-ba5f-f22554cc7d20",
+      "name": "Rugby",
+      "slug": "rugby",
+      "logos": [
+        {
+          "href": "https://a.espncdn.com/combiner/i?img=/redesign/assets/img/icons/ESPN-icon-rugby.png",
+          "alt": "",
+          "rel": [
+            "full",
+            "default"
+          ],
+          "width": 500,
+          "height": 500
+        }
+      ],
+      "leagues": [
+        {
+          "id": "8005",
+          "uid": "s:300~l:8005",
+          "name": "French Top 14",
+          "abbreviation": "TOP14",
+          "shortName": "TOP14",
+          "slug": "270559",
+          "tag": "270559",
+          "isTournament": true,
+          "smartdates": [
+            "2026-10-10T07:00Z",
+            "2026-10-11T07:00Z",
+            "2026-10-24T07:00Z"
+          ],
+          "events": [
+            {
+              "id": "604392",
+              "uid": "s:300~l:8005~e:604392~c:604392",
+              "guid": "35b1209b-6699-36c7-bbe9-b67026ab5593",
+              "date": "2026-10-03T14:35:00Z",
+              "timeValid": true,
+              "recent": false,
+              "name": "Racing 92 vs Perpignan",
+              "shortName": "RAC VS USA",
+              "links": [
+                {
+                  "rel": [
+                    "summary",
+                    "desktop",
+                    "event"
+                  ],
+                  "href": "https://www.espn.com/rugby/match/_/gameId/604392/league/270559/perpignan-racing-92",
+                  "text": "Summary"
+                },
+                {
+                  "rel": [
+                    "matchstats",
+                    "desktop",
+                    "event"
+                  ],
+                  "href": "https://www.espn.com/rugby/matchstats/_/gameId/604392/league/270559",
+                  "text": "Match Stats"
+                }
+              ],
+              "gamecastAvailable": false,
+              "playByPlayAvailable": true,
+              "commentaryAvailable": false,
+              "wallclockAvailable": false,
+              "fauxcastAvailable": false,
+              "onWatch": false,
+              "competitionId": "604392",
+              "location": "Stade Dominique Duvauchelle",
+              "season": 2027,
+              "seasonStartDate": "2027-06-14T15:50:00Z",
+              "seasonEndDate": "2027-07-02T03:59:00Z",
+              "seasonType": "1",
+              "seasonTypeHasGroups": false,
+              "group": {
+                "groupId": "1",
+                "name": "Top 14",
+                "abbreviation": "Top 14",
+                "shortName": "Top 14"
+              },
+              "link": "https://www.espn.com/rugby/match/_/gameId/604392/league/270559/perpignan-racing-92",
+              "status": "post",
+              "summary": "FT",
+              "period": 2,
+              "clock": "1'",
+              "fullStatus": {
+                "clock": 0,
+                "displayClock": "1'",
+                "period": 2,
+                "displayPeriod": "2nd",
+                "type": {
+                  "id": "3",
+                  "name": "STATUS_FINAL",
+                  "state": "post",
+                  "completed": true,
+                  "description": "FT",
+                  "detail": "FT",
+                  "shortDetail": "FT"
+                }
+              },
+              "competitors": [
+                {
+                  "id": "25920",
+                  "guid": "382fbe51-b7b1-3b76-986d-e12ed19917be",
+                  "uid": "s:300~t:25920",
+                  "type": "team",
+                  "order": 1,
+                  "homeAway": "away",
+                  "winner": false,
+                  "form": "WLWLW",
+                  "displayName": "Perpignan",
+                  "name": "Perpignan",
+                  "abbreviation": "USA",
+                  "color": "FF6600",
+                  "score": "25",
+                  "isNational": false,
+                  "links": [
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/rugby/team/_/id/25920/perpignan",
+                      "text": "Clubhouse",
+                      "shortText": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "caps",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://en.espn.co.uk/perpignan/rugby/player/caps.html?team=25920",
+                      "text": "Caps",
+                      "shortText": "Caps",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "record": "WLWLW",
+                  "records": [],
+                  "group": "1",
+                  "logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png"
+                },
+                {
+                  "id": "99855",
+                  "guid": "a0d64757-262f-3e59-a675-a489491a6a37",
+                  "uid": "s:300~t:99855",
+                  "type": "team",
+                  "order": 0,
+                  "homeAway": "home",
+                  "winner": true,
+                  "form": "LWLWL",
+                  "displayName": "Racing 92",
+                  "name": "Racing 92",
+                  "abbreviation": "RAC",
+                  "color": "3399FF",
+                  "score": "55",
+                  "isNational": false,
+                  "links": [
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/rugby/team/_/id/99855/racing-92",
+                      "text": "Clubhouse",
+                      "shortText": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "caps",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://en.espn.co.uk/racing-92/rugby/player/caps.html?team=99855",
+                      "text": "Caps",
+                      "shortText": "Caps",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "record": "LWLWL",
+                  "records": [],
+                  "group": "1",
+                  "logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/99855.png",
+                  "logoDark": "https://a.espncdn.com/i/teamlogos/rugby/teams/500-dark/99855.png"
+                }
+              ],
+              "neutralSite": false,
+              "pccEventId": "604392",
+              "onDisneyNetwork": false,
+              "appLinks": []
+            },
+            {
+              "id": "604394",
+              "uid": "s:300~l:8005~e:604394~c:604394",
+              "guid": "9fe065d2-8b73-3c37-a0f9-c45e63477f5d",
+              "date": "2026-10-03T19:00:00Z",
+              "timeValid": true,
+              "recent": false,
+              "name": "Castres Olympique vs Stade Toulousain",
+              "shortName": "CAS VS STA",
+              "links": [
+                {
+                  "rel": [
+                    "summary",
+                    "desktop",
+                    "event"
+                  ],
+                  "href": "https://www.espn.com/rugby/match/_/gameId/604394/league/270559/stade-toulousain-castres-olympique",
+                  "text": "Summary"
+                },
+                {
+                  "rel": [
+                    "matchstats",
+                    "desktop",
+                    "event"
+                  ],
+                  "href": "https://www.espn.com/rugby/matchstats/_/gameId/604394/league/270559",
+                  "text": "Match Stats"
+                }
+              ],
+              "gamecastAvailable": false,
+              "playByPlayAvailable": true,
+              "commentaryAvailable": false,
+              "wallclockAvailable": false,
+              "fauxcastAvailable": false,
+              "onWatch": false,
+              "competitionId": "604394",
+              "location": "Castres",
+              "season": 2027,
+              "seasonStartDate": "2027-06-14T15:50:00Z",
+              "seasonEndDate": "2027-07-02T03:59:00Z",
+              "seasonType": "1",
+              "seasonTypeHasGroups": false,
+              "group": {
+                "groupId": "1",
+                "name": "Top 14",
+                "abbreviation": "Top 14",
+                "shortName": "Top 14"
+              },
+              "link": "https://www.espn.com/rugby/match/_/gameId/604394/league/270559/stade-toulousain-castres-olympique",
+              "status": "post",
+              "summary": "FT",
+              "period": 2,
+              "clock": "1'",
+              "fullStatus": {
+                "clock": 0,
+                "displayClock": "1'",
+                "period": 2,
+                "displayPeriod": "2nd",
+                "type": {
+                  "id": "3",
+                  "name": "STATUS_FINAL",
+                  "state": "post",
+                  "completed": true,
+                  "description": "FT",
+                  "detail": "FT",
+                  "shortDetail": "FT"
+                }
+              },
+              "competitors": [
+                {
+                  "id": "25922",
+                  "guid": "5903750f-2561-3789-b427-6b74fc265e5c",
+                  "uid": "s:300~t:25922",
+                  "type": "team",
+                  "order": 1,
+                  "homeAway": "away",
+                  "winner": true,
+                  "form": "WWWWW",
+                  "displayName": "Stade Toulousain",
+                  "name": "Stade Toulousain",
+                  "abbreviation": "STA",
+                  "color": "000000",
+                  "score": "8",
+                  "isNational": false,
+                  "links": [
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/rugby/team/_/id/25922/stade-toulousain",
+                      "text": "Clubhouse",
+                      "shortText": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "caps",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://en.espn.co.uk/stade-toulousain/rugby/player/caps.html?team=25922",
+                      "text": "Caps",
+                      "shortText": "Caps",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "record": "WWWWW",
+                  "records": [],
+                  "group": "1",
+                  "logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25922.png",
+                  "logoDark": "https://a.espncdn.com/i/teamlogos/rugby/teams/500-dark/25922.png"
+                },
+                {
+                  "id": "25916",
+                  "guid": "42b99f2e-a016-37ff-9254-38459007c8f2",
+                  "uid": "s:300~t:25916",
+                  "type": "team",
+                  "order": 0,
+                  "homeAway": "home",
+                  "winner": false,
+                  "form": "LLLWL",
+                  "displayName": "Castres Olympique",
+                  "name": "Castres Olympique",
+                  "abbreviation": "CAS",
+                  "color": "000066",
+                  "score": "7",
+                  "isNational": false,
+                  "links": [
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/rugby/team/_/id/25916/castres-olympique",
+                      "text": "Clubhouse",
+                      "shortText": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "caps",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://en.espn.co.uk/castres-olympique/rugby/player/caps.html?team=25916",
+                      "text": "Caps",
+                      "shortText": "Caps",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "record": "LLLWL",
+                  "records": [],
+                  "group": "1",
+                  "logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25916.png",
+                  "logoDark": "https://a.espncdn.com/i/teamlogos/rugby/teams/500-dark/25916.png"
+                }
+              ],
+              "neutralSite": false,
+              "pccEventId": "604394",
+              "onDisneyNetwork": false,
+              "appLinks": []
+            },
+            {
+              "id": "604395",
+              "uid": "s:300~l:8005~e:604395~c:604395",
+              "guid": "0bb01f6f-5d7b-3df0-be45-87e24b7ca644",
+              "date": "2026-10-04T19:05:00Z",
+              "timeValid": true,
+              "recent": false,
+              "name": "Montpellier Herault vs Toulon",
+              "shortName": "MON VS RC",
+              "links": [
+                {
+                  "rel": [
+                    "summary",
+                    "desktop",
+                    "event"
+                  ],
+                  "href": "https://www.espn.com/rugby/match/_/gameId/604395/league/270559/toulon-montpellier-herault",
+                  "text": "Summary"
+                },
+                {
+                  "rel": [
+                    "matchstats",
+                    "desktop",
+                    "event"
+                  ],
+                  "href": "https://www.espn.com/rugby/matchstats/_/gameId/604395/league/270559",
+                  "text": "Match Stats"
+                }
+              ],
+              "gamecastAvailable": false,
+              "playByPlayAvailable": true,
+              "commentaryAvailable": false,
+              "wallclockAvailable": false,
+              "fauxcastAvailable": false,
+              "onWatch": false,
+              "competitionId": "604395",
+              "location": "Montpellier",
+              "season": 2027,
+              "seasonStartDate": "2027-06-14T15:50:00Z",
+              "seasonEndDate": "2027-07-02T03:59:00Z",
+              "seasonType": "1",
+              "seasonTypeHasGroups": false,
+              "group": {
+                "groupId": "1",
+                "name": "Top 14",
+                "abbreviation": "Top 14",
+                "shortName": "Top 14"
+              },
+              "link": "https://www.espn.com/rugby/match/_/gameId/604395/league/270559/toulon-montpellier-herault",
+              "status": "post",
+              "summary": "FT",
+              "period": 2,
+              "clock": "1'",
+              "fullStatus": {
+                "clock": 0,
+                "displayClock": "1'",
+                "period": 2,
+                "displayPeriod": "2nd",
+                "type": {
+                  "id": "3",
+                  "name": "STATUS_FINAL",
+                  "state": "post",
+                  "completed": true,
+                  "description": "FT",
+                  "detail": "FT",
+                  "shortDetail": "FT"
+                }
+              },
+              "competitors": [
+                {
+                  "id": "25986",
+                  "guid": "19f99f04-39eb-30dd-a5c8-2195638b8cd0",
+                  "uid": "s:300~t:25986",
+                  "type": "team",
+                  "order": 1,
+                  "homeAway": "away",
+                  "winner": false,
+                  "form": "WLWLL",
+                  "displayName": "Toulon",
+                  "name": "Toulon",
+                  "abbreviation": "RC",
+                  "color": "CC0000",
+                  "score": "0",
+                  "isNational": false,
+                  "links": [
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/rugby/team/_/id/25986/toulon",
+                      "text": "Clubhouse",
+                      "shortText": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "caps",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://en.espn.co.uk/toulon/rugby/player/caps.html?team=25986",
+                      "text": "Caps",
+                      "shortText": "Caps",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "record": "WLWLL",
+                  "records": [],
+                  "group": "1",
+                  "logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25986.png",
+                  "logoDark": "https://a.espncdn.com/i/teamlogos/rugby/teams/500-dark/25986.png"
+                },
+                {
+                  "id": "25918",
+                  "guid": "aa28e695-2c5b-38a3-ae9b-b27b214ef750",
+                  "uid": "s:300~t:25918",
+                  "type": "team",
+                  "order": 0,
+                  "homeAway": "home",
+                  "winner": true,
+                  "form": "LWLWW",
+                  "displayName": "Montpellier Herault",
+                  "name": "Montpellier Herault",
+                  "abbreviation": "MON",
+                  "color": "0000FF",
+                  "score": "28",
+                  "isNational": false,
+                  "links": [
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/rugby/team/_/id/25918/montpellier-herault",
+                      "text": "Clubhouse",
+                      "shortText": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "language": "en-US",
+                      "rel": [
+                        "caps",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://en.espn.co.uk/montpellier-herault/rugby/player/caps.html?team=25918",
+                      "text": "Caps",
+                      "shortText": "Caps",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "record": "LWLWW",
+                  "records": [],
+                  "group": "1",
+                  "logo": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25918.png"
+                }
+              ],
+              "neutralSite": false,
+              "pccEventId": "604395",
+              "onDisneyNetwork": false,
+              "appLinks": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

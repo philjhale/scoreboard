@@ -8,6 +8,9 @@ import { describe, expect, it } from 'vitest';
 import gallagherHeader from './fixtures/espn/gallagher-premiership-header.json';
 import nbaHeader from './fixtures/espn/nba-header.json';
 import nflHeader from './fixtures/espn/nfl-header.json';
+import sixNationsHeader from './fixtures/espn/six-nations-header.json';
+import top14Header from './fixtures/espn/top-14-header.json';
+import unitedRugbyChampionshipHeader from './fixtures/espn/united-rugby-championship-header.json';
 import premierLeagueHeader from './fixtures/espn/premier-league-header.json';
 import scoreboard20260918 from './fixtures/espn/premier-league-scoreboard-20260918.json';
 import scoreboard20260919 from './fixtures/espn/premier-league-scoreboard-20260919.json';
@@ -30,6 +33,9 @@ const headers = {
   nfl: nflHeader,
   'premier league': premierLeagueHeader,
   'gallagher premiership': gallagherHeader,
+  'united rugby championship': unitedRugbyChampionshipHeader,
+  'top 14': top14Header,
+  'six nations': sixNationsHeader,
 };
 
 describe('scoreboard header fixtures', () => {

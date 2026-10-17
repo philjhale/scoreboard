@@ -40,6 +40,21 @@ const headers = {
     request: { sport: 'rugby', league: '267979', dates: '20260929-20261007' },
     ids: ['604619', '604621', '604623'],
   },
+  'united-rugby-championship-header.json': {
+    request: { sport: 'rugby', league: '270557', dates: '20260929-20261007' },
+    // Connacht v Benetton (2 Oct), Leinster v Sharks and Bulls v Munster (3 Oct).
+    ids: ['604042', '604045', '604046'],
+  },
+  'top-14-header.json': {
+    request: { sport: 'rugby', league: '270559', dates: '20260929-20261007' },
+    // Perpignan v Racing 92 (3 Oct), Stade Toulousain v Castres (3 Oct), Toulon v Montpellier (4 Oct).
+    ids: ['604392', '604394', '604395'],
+  },
+  'six-nations-header.json': {
+    request: { sport: 'rugby', league: '180659', dates: '20260307-20260314' },
+    // England v Italy (7 Mar, before the Window), then the three matches of 14 Mar.
+    ids: ['602513', '602514', '602515', '602516'],
+  },
 };
 
 const scoreboards = {
