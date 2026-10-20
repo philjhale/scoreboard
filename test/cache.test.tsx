@@ -177,7 +177,8 @@ describe('Storage problems never break Results', () => {
   it.each([
     ['corrupt JSON', '{not json'],
     ['another schema version', JSON.stringify({ version: 0, results: [] })],
-    ['the wrong shape', JSON.stringify({ version: 1, results: [{ id: 7 }] })],
+    ['the previous schema version', JSON.stringify({ version: 1, results: [] })],
+    ['the wrong shape', JSON.stringify({ version: 2, results: [{ id: 7 }] })],
     [
       'a Result with an unknown winner',
       cacheValue([{ ...cachedResult('2026-10-05T18:00:00Z', 'Cached Hosts'), winner: 'nobody' as never }]),
