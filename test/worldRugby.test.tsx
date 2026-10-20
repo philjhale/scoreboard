@@ -49,6 +49,14 @@ describe('Women’s rugby Results from World Rugby', () => {
     expect(within(semiFinal!).getByText('38').closest('strong')).toBeNull();
   });
 
+  it('shows full team names, not abbreviations, on narrow screens too', async () => {
+    renderApp({ now: PWR_NOW });
+
+    const [semiFinal] = await resultRows("Premiership Women's Rugby");
+    const shortNames = Array.from(semiFinal!.querySelectorAll('.team-name-short')).map((el) => el.textContent);
+    expect(shortNames).toEqual(['Saracens Women', 'Exeter Chiefs Women']);
+  });
+
   it('shows a draw with neither team in bold', async () => {
     renderApp({ now: WXV_NOW });
 
@@ -72,9 +80,10 @@ describe('Women’s rugby Results from World Rugby', () => {
     renderApp({ now: WXV_NOW });
     await resultRows('WXV');
 
-    expect(screen.queryByText('Australia', { exact: false })).toBeInTheDocument(); // France v Australia, 19 Sep
+    expect(screen.queryAllByText('Australia', { exact: false })).not.toHaveLength(0); // France v Australia, 19 Sep
     expect(screen.queryByText('Manchester')).not.toBeInTheDocument();
-    expect(screen.queryAllByText('England')).toHaveLength(1); // not also England v Australia, 12 Sep
+    // One span each for the full and short name; not also England v Australia, 12 Sep
+    expect(screen.queryAllByText('England')).toHaveLength(2);
   });
 
   it('leaves out matches that are not completed, even with scores', async () => {

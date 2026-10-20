@@ -151,7 +151,9 @@ function toResult(match: unknown, competition: WorldRugbyCompetition): Result | 
 function team(raw: unknown, score: unknown): Team | undefined {
   const name = str(at(raw, 'name'));
   if (!name || typeof score !== 'number' || !Number.isFinite(score)) return undefined;
-  return { name, shortName: str(at(raw, 'abbreviation')) ?? name, score };
+  // The 3-letter `abbreviation` (GLO, TRF) is cryptic and missing for some teams, and the
+  // stacked mobile layout has room for the full name, so both names are the full name.
+  return { name, shortName: name, score };
 }
 
 function escapeRegExp(text: string): string {
