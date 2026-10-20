@@ -170,7 +170,7 @@ Same shape as above, trimmed. England 48, Australia 15:
 | Kick-off (UTC ms) | `time.millis` | Use this. `time.label` is a date string in the venue's local time (`gmtOffset` hours), so it can differ from the UTC date |
 | First team | `teams[0].name` | No home/away flag. Treating index 0 as home is an assumption |
 | Second team | `teams[1].name` | |
-| Short name | `teams[n].abbreviation` | `null` for some PWR teams (for example Loughborough Lightning) |
+| Short name | `teams[n].name` | Same as the full name. `teams[n].abbreviation` (GLO, TRF) is deliberately unused: it is cryptic on mobile and `null` for some PWR teams (for example Loughborough Lightning) |
 | Score | `scores[0]`, `scores[1]` | Same order as `teams`. Unplayed matches have `[0, 0]`, not `null` |
 | Status | `status` | See below |
 | Winner | `outcome` | `A` = `teams[0]` won, `B` = `teams[1]` won, `D` = draw, `N` = none |

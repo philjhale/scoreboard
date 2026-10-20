@@ -19,7 +19,8 @@ import { WINDOW_DAYS } from './types';
 import type { LocalDate, Result } from './types';
 import { addDays, localDateOf } from './window';
 
-const CACHE_VERSION = 1;
+// v2: World Rugby `shortName` changed from the 3-letter code to the full name.
+const CACHE_VERSION = 2;
 const KEY_PREFIX = `sports-aggregator:cache:v${CACHE_VERSION}`;
 
 /** Fetch the Results kicking off on `dates` (oldest first, contiguous, ending today). */
